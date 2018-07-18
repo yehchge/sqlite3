@@ -98,7 +98,6 @@ class CSQLite3 {
        	return $resx;
 	}
 
-
 	/**
 	* @param $iRs resource result
 	* @return Fetch a result row as an associative array, a numeric array, or both.
@@ -108,8 +107,6 @@ class CSQLite3 {
     	$resx = $iRs->fetchArray(SQLITE3_ASSOC);
        	return $resx;
 	}
-
-
 
 	/**
 	* @return Get the ID generated from the previous INSERT operation
@@ -144,8 +141,6 @@ class CSQLite3 {
 		$iChangeRows = $this->iGetChangeRowID();
 		return $iChangeRows;
     }
-
-
 
   	/**
 	* @param $sTable db table $aField field array $aValue value array
