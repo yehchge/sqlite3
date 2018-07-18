@@ -18,7 +18,7 @@ class CSQLite3 {
 	 * @param [type] $mode SQLITE3_BOTH、SQLITE3_ASSOC、SQLITE3_NUM
 	 * @created 2017/04/18
 	 */
-	public function __construct($sDb='', $mode = SQLITE3_ASSOC) {
+	public function __construct($sDb='', $mode = 'SQLITE3_ASSOC') {
 		$this->m_sDb=defined('_MYSQL_DB')?_MYSQL_DB:null;
 		$this->mode = $mode;
 
