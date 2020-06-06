@@ -30,9 +30,10 @@ if ($iChangeRows) {
 // }
 
 // List
+$sBrLf = "<br>";
 $results = $CSQLite3->iQuery("SELECT * FROM tbl1 ORDER BY id DESC LIMIT 0,10");
 while($row = $CSQLite3->aFetchAssoc($results)){
-    echo $row['one']." , ".$row['two']."\r\n";
+    echo $row['one']." , ".$row['two'].$sBrLf;
 }
 
 function sRandomString($sString,$sNum){ //(字元,回傳幾位)
@@ -45,7 +46,7 @@ function sRandomString($sString,$sNum){ //(字元,回傳幾位)
     }
     $rs = '';
     for($i=0;$i<$sNum;$i++){
-        $rs.=$s{rand(0,strlen($s)-1)};
+        $rs.=$s[rand(0,strlen($s)-1)];
     }
     return $rs;
 }
